@@ -1,0 +1,244 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+  --black: #333;
+  --white : #fff;
+  --ww: 100%-350px
+}
+body{
+    overflow-x: hidden;
+}
+.main{
+    width: 100%;
+    position: relative;
+}
+.nav{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+.nav.active{
+    width: 0%;
+}
+.nav ul{
+    position: relative;
+    top: 0;
+    left: 0;
+   width: 100%; 
+   padding: 20px 50px;
+}
+.nav ul li{
+    position: relative;
+   width: 100%; 
+   list-style: none;
+}
+.nav ul li a{
+   position: relative;     
+   display:block;
+width: 100%;
+margin: 10px 5px;
+text-transform: uppercase;
+text-decoration: none;
+color: var(--black);
+font-weight: 600;
+opacity: 0.7;
+
+}
+.nav ul li a:hover{
+    opacity: 1;
+}
+.msec{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    left: 300px;
+    transition: width 0.5s , left 0.5s;
+}
+.msec.active{
+    width: 100%;
+ left: 0px;
+}
+.header{
+    height: 60px;
+    padding: 0px 40px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 300px);
+    background: var(--white);
+    border-bottom: 1px soild rgba(0, 0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    transition: width 0.5s , left 0.5s;
+}
+.header.active{
+width: calc(100%);
+left: 0px;
+}
+.logo{
+    color: var(--black);
+    font-weight: 700;
+text-decoration: none;
+font-size: 1.7em;
+text-transform: uppercase;
+
+}
+.toggle{ 
+
+    position: relative;
+    width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 27px;
+cursor: pointer;
+color: var(--black);
+}
+.banner{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.E{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.E img{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h3{
+    position: relative;
+    font-size: 1.4em;
+    color: var(--black);
+    letter-spacing: 1px;
+text-transform: uppercase;
+}
+p{
+    color: gray;
+}
+.sm{
+    display: flex;
+   
+}
+.sm li{
+    list-style: none;
+}
+.sm li a{
+    display: inline-block;
+    width: 40px;
+height: 40px;
+margin: 5px;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+color: var(--black);
+font-size: 1.2em;
+transition: 1s;
+}
+.sm li a:hover{
+   width: 45px;
+   height: 45px;
+}
+.adjust{
+    position: relative;
+
+    padding: 0 40px;
+    background: var(--white);
+}
+.title{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title h2{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+.title h2::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 50px;
+    height: 1px; 
+    background: var(--black);
+}
+.about .content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.text{
+    width: 49%;
+    min-width: 49%;
+}
+.services .content{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+}
+.sb{
+    border: 5px solid;
+    padding: 50px 20px;
+    display: flex;
+    background: var(--white);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 7px 6px 23px 2px rgba(0,0,0,0.44);
+-webkit-box-shadow: 7px 6px 23px 2px rgba(0,0,0,0.44);
+-moz-box-shadow: 7px 6px 23px 2px rgba(0,0,0,0.44);
+margin: 10px;
+}
+.sb svg{
+    max-width: 50px;
+}
+.sb h2{
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--black);
+    text-align: center;
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+}
+.sb p{
+    text-align: center;
+}
+.services .title{
+    margin-top: 40px ;
+}
